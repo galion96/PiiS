@@ -1,2 +1,2 @@
 # PiiS
-Projekt iz kolegija Projektiranja Informacijskih sustava
+Projekt iz kolegija Projektiranje Informacijskih sustava
