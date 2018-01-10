@@ -1,0 +1,7 @@
+[08-Aug-2017 15:52:38 UTC] PHP Warning:  require(vendor/autoload.php): failed to open stream: No such file or directory in /home/cserockers/public_html/PHPMailer/get_oauth_token.php on line 18
+[08-Aug-2017 15:52:38 UTC] PHP Fatal error:  require(): Failed opening required 'vendor/autoload.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/cserockers/public_html/PHPMailer/get_oauth_token.php on line 18
+[08-Aug-2017 16:26:41 UTC] PHP Fatal error:  Class 'PHPMailer' not found in /home/cserockers/public_html/PHPMailer/class.phpmaileroauth.php on line 27
+[02-Oct-2017 23:57:31 UTC] PHP Warning:  require(vendor/autoload.php): failed to open stream: No such file or directory in /home/cserockers/public_html/PHPMailer/get_oauth_token.php on line 18
+[02-Oct-2017 23:57:31 UTC] PHP Warning:  require(vendor/autoload.php): failed to open stream: No such file or directory in /home/cserockers/public_html/PHPMailer/get_oauth_token.php on line 18
+[02-Oct-2017 23:57:31 UTC] PHP Fatal error:  require(): Failed opening required 'vendor/autoload.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/cserockers/public_html/PHPMailer/get_oauth_token.php on line 18
+[03-Oct-2017 10:58:08 UTC] PHP Fatal error:  Class 'PHPMailer' not found in /home/cserockers/public_html/PHPMailer/class.phpmaileroauth.php on line 27
