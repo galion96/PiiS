@@ -139,27 +139,36 @@ function displayItems(data) {
         localStorage.setItem("boardID", id);
     });
 
-    $(".delButton").click(function (e) {
+ $(".delButton").click(function (e) {
         var id = this.id;
         console.log(id);
         var parent = $(event.target).parent().parent().parent();
-        $.ajax({
-            url: 'http://' + serverName + '/index.php',
-            type: "POST",
-            data: {
-                method: 'saveBoardToRoom',
-                id_waspmote: id,
-                id_room: "null"
-            },
-            dataType: "json",
-            success: function (r) {
-                $(parent).remove();
-                swalConfirm("Uspješno izbrisana soba!");
-            },
-            error: function (err) {
-                console.log(err);
-            }
-        });
+        swal({
+            title: 'Jeste li sigurni da želitet izbrisat ovu pločicu?',
+            type: 'error',
+            showCancelButton: true,
+            focusConfirm: false,
+            confirmButtonText: "Da, želim!",
+            cancelButtonText: "Ne želim!",
+        }).then(function () {
+            $.ajax({
+                url: 'http://' + serverName + '/index.php',
+                type: "POST",
+                data: {
+                    method: 'saveBoardToRoom',
+                    id_waspmote: id,
+                    id_room: "null"
+                },
+                dataType: "json",
+                success: function (r) {
+                    $(parent).remove();
+                    swalConfirm("Uspješno izbrisana pločica!");
+                },
+                error: function (err) {
+                    console.log(err);
+                }
+            });
+        }).catch(swal.noop);
     });
 }
 
